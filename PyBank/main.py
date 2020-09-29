@@ -56,7 +56,7 @@ with open(budget_data, newline="") as csvfile:
     profit_sum = sum(profit_change)
 
     # Average of change in Profit/Loss
-    profit_average = (profit_sum/month_counter)
+    profit_average = round(profit_sum/(month_counter - 1), 2)
 
     # Highest and lowest changes in Profit/Loss
     highest_change = max(profit_change)
