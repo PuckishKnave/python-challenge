@@ -69,6 +69,17 @@ with open(budget_data, newline="") as csvfile:
     best_month = months[highest_month]
     worst_month = months[lowest_month]
 
+# Print analysis to terminal
+print("Financial Analysis")
+print("--------------------------")
+print(f"Total months: {month_counter}")
+print(f"Total: ${net_profit}")
+print(f"Average Change: ${profit_average}")
+print(f"Greatest Increase in Profits: {best_month} (${highest_change})")
+print(f"Greatest Decrease in Profits: {worst_month} (${lowest_change})")
+
+
+
 
 
 
