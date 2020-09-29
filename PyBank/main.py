@@ -71,14 +71,24 @@ with open(budget_data, newline="") as csvfile:
 
 # Print analysis to terminal
 print("Financial Analysis")
-print("--------------------------")
+print("----------------------------")
 print(f"Total months: {month_counter}")
 print(f"Total: ${net_profit}")
 print(f"Average Change: ${profit_average}")
 print(f"Greatest Increase in Profits: {best_month} (${highest_change})")
 print(f"Greatest Decrease in Profits: {worst_month} (${lowest_change})")
 
-
+# Export to analysis results text file (must already be in folder)
+output_txt = os.path.join("analysis_results.txt")
+with open(output_txt, "w") as text:
+    text.write("Financial Analysis\n")
+    text.write("----------------------------\n")
+    text.write(f"Total Months: {month_counter}\n")
+    text.write(f"Total: ${net_profit}\n")
+    text.write(f"Average Change: ${profit_average}\n")
+    text.write(f"Greatest Increase in Profits: {best_month} (${highest_change})\n")
+    text.write(f"Greatest Decrease in Profits: {worst_month} (${lowest_change})\n")
+    
 
 
 
