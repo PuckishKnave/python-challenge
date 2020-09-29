@@ -78,7 +78,7 @@ print(f"Average Change: ${profit_average}")
 print(f"Greatest Increase in Profits: {best_month} (${highest_change})")
 print(f"Greatest Decrease in Profits: {worst_month} (${lowest_change})")
 
-# Export to analysis results text file (must already be in folder)
+# Export to analysis results text file (must already be in folder with .py file)
 output_txt = os.path.join("analysis_results.txt")
 with open(output_txt, "w") as text:
     text.write("Financial Analysis\n")
